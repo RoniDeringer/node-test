@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Buscar Endereco por CEP</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <header class="header">
+        <div class="brand">
+          <div class="logo" aria-hidden="true"></div>
+          <div>
+            <h1>CEP</h1>
+            <p>Digite o CEP com mascara e veja o endereco.</p>
+          </div>
+        </div>
+      </header>
+
+      <section class="card" aria-label="Busca de CEP">
+        <label class="label" for="cep">CEP</label>
+        <div class="row">
+          <input
+            id="cep"
+            name="cep"
+            inputmode="numeric"
+            autocomplete="postal-code"
+            placeholder="00000-000"
+            maxlength="9"
+          />
+          <button id="buscar" type="button">Buscar</button>
+          <button id="limpar" type="button" class="ghost">Limpar</button>
+        </div>
+        <p id="status" class="status" role="status" aria-live="polite"></p>
+      </section>
+
+      <section class="card" aria-label="Resultado">
+        <h2>Resultado</h2>
+        <div id="resultado" class="result empty">
+          <p>Nenhuma informacao ainda. Digite um CEP para buscar.</p>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <p>
+          Fonte: ViaCEP. Dados sao salvos em cookies para persistir ao recarregar.
+        </p>
+      </footer>
+    </main>
+
+    <script src="/app.js"></script>
+  </body>
+</html>
